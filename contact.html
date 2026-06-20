@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Joseph Bright</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/script.js"></script>
+</head>
+<body data-page="contact">
+  <header class="site-header">
+    <div class="brand-block">
+      <div>
+        <p class="eyebrow">Student Portfolio</p>
+        <h1>Joseph Bright</h1>
+      </div>
+    </div>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="projects.html">Projects</a>
+      <a class="nav-link" href="planner.html">Planner</a>
+      <a class="nav-link active" href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <p class="section-tag">Get in touch</p>
+      <h2>Contact Me</h2>
+      <p>
+        Use the form below to send a message. All fields are required, and the form checks basic email and phone number rules.
+      </p>
+    </section>
+
+    <section class="content-panel">
+      <form id="contact-form" class="contact-form" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text">
+          </div>
+          <div class="field">
+            <label for="email">Email Address</label>
+            <input id="email" name="email" type="email">
+          </div>
+          <div class="field">
+            <label for="phone">Phone Number</label>
+            <input id="phone" name="phone" type="tel" inputmode="numeric">
+          </div>
+          <div class="field field-full">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6"></textarea>
+          </div>
+        </div>
+        <button class="button primary" type="submit">Send Message</button>
+        <p id="contact-message" class="form-message" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Joseph Bright. Academic portfolio website.</p>
+  </footer>
+</body>
+</html>

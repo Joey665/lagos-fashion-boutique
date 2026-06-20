@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic Planner | Joseph Bright</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/script.js"></script>
+</head>
+<body data-page="planner">
+  <header class="site-header">
+    <div class="brand-block">
+      <div>
+        <p class="eyebrow">Student Portfolio</p>
+        <h1>Joseph Bright</h1>
+      </div>
+    </div>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="projects.html">Projects</a>
+      <a class="nav-link active" href="planner.html">Planner</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <p class="section-tag">Task manager</p>
+      <h2>Academic Planner</h2>
+      <p>
+        Add tasks, mark them as completed, and delete them when done. The list is powered by one JavaScript array and DOM updates only.
+      </p>
+    </section>
+
+    <section class="content-panel planner-panel">
+      <form id="planner-form" class="planner-form" novalidate>
+        <label for="task-input">New Task</label>
+        <div class="planner-controls">
+          <input id="task-input" name="task" type="text">
+          <button class="button primary" type="submit">Add Task</button>
+        </div>
+        <p id="planner-message" class="form-message" aria-live="polite"></p>
+      </form>
+
+      <ul id="task-list" class="task-list" aria-label="Academic tasks"></ul>
+    </section>
+
+    <section class="content-panel">
+      <h3>Example Tasks</h3>
+      <ul class="plain-list">
+        <li>Complete COS106 Assignment</li>
+        <li>Study for Mathematics Test</li>
+        <li>Submit Project Report</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Joseph Bright. Academic portfolio website.</p>
+  </footer>
+</body>
+</html>
