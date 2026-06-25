@@ -15,6 +15,11 @@
         <h1>Joseph Bright</h1>
       </div>
     </div>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <nav class="site-nav" aria-label="Primary navigation">
       <a class="nav-link" href="index.html">Home</a>
       <a class="nav-link" href="about.html">About</a>
@@ -29,7 +34,7 @@
       <p class="section-tag">Get in touch</p>
       <h2>Contact Me</h2>
       <p>
-        Use the form below to send a message. All fields are required, and the form checks basic email and phone number rules.
+        Use the form below to send a message. All fields are required and will be validated in real-time.
       </p>
     </section>
 
@@ -37,24 +42,69 @@
       <form id="contact-form" class="contact-form" novalidate>
         <div class="form-grid">
           <div class="field">
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text">
+            <label for="name">Full Name <span class="required" aria-label="required">*</span></label>
+            <input 
+              id="name" 
+              name="name" 
+              type="text"
+              placeholder="John Doe"
+              required
+              aria-required="true"
+              aria-describedby="name-error"
+            >
+            <span id="name-error" class="field-error" role="alert" aria-live="polite"></span>
           </div>
+
           <div class="field">
-            <label for="email">Email Address</label>
-            <input id="email" name="email" type="email">
+            <label for="email">Email Address <span class="required" aria-label="required">*</span></label>
+            <input 
+              id="email" 
+              name="email" 
+              type="email"
+              placeholder="you@example.com"
+              required
+              aria-required="true"
+              aria-describedby="email-error"
+            >
+            <span id="email-error" class="field-error" role="alert" aria-live="polite"></span>
           </div>
+
           <div class="field">
-            <label for="phone">Phone Number</label>
-            <input id="phone" name="phone" type="tel" inputmode="numeric">
+            <label for="phone">Phone Number <span class="required" aria-label="required">*</span></label>
+            <input 
+              id="phone" 
+              name="phone" 
+              type="tel" 
+              placeholder="+1 (555) 000-0000"
+              inputmode="tel"
+              required
+              aria-required="true"
+              aria-describedby="phone-error"
+            >
+            <span id="phone-error" class="field-error" role="alert" aria-live="polite"></span>
           </div>
+
           <div class="field field-full">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="6"></textarea>
+            <label for="message">Message <span class="required" aria-label="required">*</span></label>
+            <textarea 
+              id="message" 
+              name="message" 
+              rows="6"
+              placeholder="Your message here..."
+              required
+              aria-required="true"
+              aria-describedby="message-error message-count"
+            ></textarea>
+            <div class="field-helper">
+              <span id="message-count" class="char-count">0 / 1000</span>
+            </div>
+            <span id="message-error" class="field-error" role="alert" aria-live="polite"></span>
           </div>
         </div>
+
+        <div id="form-status" class="form-status" role="status" aria-live="polite" aria-atomic="true"></div>
+
         <button class="button primary" type="submit">Send Message</button>
-        <p id="contact-message" class="form-message" aria-live="polite"></p>
       </form>
     </section>
   </main>
